@@ -1,0 +1,194 @@
+@charset "utf-8";
+/*background color for whole page*/
+body {
+    margin: 0;
+    background: rgb(66, 126, 66);
+}
+
+/* Main Nav */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+header .logo_header {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+header .logo {
+    height: 80px; /* image fits the nav */
+    width: auto;
+}
+
+header nav.horizontalNav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Images/tavern.jpg);
+}
+
+header ul {
+    display: flex;
+    flex-grow: 1; /*takes up the remaining space of the nav evenly*/
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header li {
+    flex: 1;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.3em;
+    color: white;
+}
+
+header li:hover {
+    background: green;
+    color: white;
+}
+
+header a {
+    display: block; /*clicking the li instead of the text will take you to the page*/
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+/*Main nav END*/
+
+/*style for h1*/
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+    font-size: 85px;
+    font-family: fantasy, 'Times New Roman';
+}
+
+/*setting size for tavern image*/
+#tavern {
+    width: 90%;
+    height: 90%;
+    margin-top: 10px;
+    border-radius: 10px; 
+    border: 5px solid black;
+}
+
+/*setting size for burger image*/
+#burger {
+    width: 85%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 50px;
+    border-radius: 10px; 
+    border: 5px solid black; 
+}
+
+/*aligning text of the figure caption to be centered*/
+figure {
+    text-align: center;
+}
+
+/*setting size for beer image*/
+#beer {
+    width: 85%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 40px;
+    border-radius: 10px; 
+    border: 5px solid black; 
+}
+
+/*setting the grid items in the format they are, and colors, and font colors, etc.*/
+.content {
+    margin-top: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.column {
+    width: 48%; 
+    background-color: #222222; 
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.column:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 12px 24px black; 
+}
+
+.column h2 {
+    font-size: 2.1rem;
+    color: limegreen; 
+    margin-bottom: 15px;
+}
+
+.column p {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: white; 
+}
+
+.full-width-row {
+    width: 97%;
+    background-color: #222222; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(2, 2, 2, 0.2); 
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-width-row:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+.full-width-row h2 {
+    font-size: 2.1rem;
+    color: limegreen; 
+    margin-bottom: 15px;
+}
+
+.full-width-row p {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: white; 
+}
+
+/*style for bottom quote on page*/
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+    font-size: 75px;
+    font-family: fantasy, 'Times New Roman';
+}
+
+/*footer design*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    margin-top: 50px;
+    font-weight: bold;
+}

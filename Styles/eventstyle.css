@@ -1,0 +1,287 @@
+@charset "utf-8";
+/* Main Nav */
+/*Aligns nav items contained in the header, also sets black background*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 0 10px;
+    margin: 10px;
+}
+/*Puts the nav image in a flexbox, might be able to merge this into another class*/
+header .logo_header {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+/*Setting size of the nav logo, without this the image covers the whole page*/
+header .logo {
+    height: 80px; /* image fits the nav */
+    width: auto;
+}
+/*This makes the background image of the nav stretch properly*/
+header nav.horizontalNav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Images/tavern.jpg);
+}
+/*Removes bullet points from nav list, does some more aligning of nav items*/
+header ul {
+    display: flex;
+    flex-grow: 1; /*takes up the remaining space of the nav evenly*/
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*Removes bullet points again, does some aligning of list items. Could be removed maybe. */
+header li {
+    flex: 1;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.3em;
+    color: white;
+}
+/*Makes the nav boxes turn green when you highlight them*/
+header li:hover {
+    background: green;
+    color: white;
+}
+/*Removes underline, colours text white, adds text shadows, display box might not be working*/
+header a {
+    display: block; /*clicking the li instead of the text will take you to the page*/
+    text-decoration: none;
+    color: white;
+	text-shadow: 1px 1px black;
+}
+/*Main nav END*/
+
+/* this week at Respawn Tavern */
+
+/*This is the container for the text above and below the logo*/
+
+/*This aligns all the content starting from the first line of text to the bottom of the logo image*/
+.welcome_text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 1px;
+}
+/*This sets the properties of the big green/white text at the top of the page, all three lines*/
+.welcome_text .big_text{
+	font-size: 35px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	font-family: 'Courier New', monospace;
+	font-weight: bold;
+	/*https://www.geeksforgeeks.org/how-to-create-multicolored-text-in-a-web-page-using-html-css/*/
+	background: linear-gradient(limegreen, white 70%);
+	color: transparent;
+	/*This is flagged as a problem, but when you do the fix suggested it breaks the text.*/
+	-webkit-background-clip: text;
+}
+/*This sets the properties of "Every week we will be hosting events." and "At Respawn Tavern we want to grow a strong local community that loves eSports."*/
+.welcome_text .medium_text{
+	color: white;
+	text-shadow: black 2px 2px;
+	font-size: 20px;
+	margin: 5px 0px 10px 0px;
+}
+/*This is the properties for the line in between At Respawn Tavern and This week At*/
+.welcome_line{
+	width: 1200px;
+	height: 3px;
+	border-radius: 5px;
+	background: linear-gradient(limegreen, white);
+	border: none;
+}
+/*This is the properties for This week At*/
+.welcome_text h2{
+	margin-top: 5px;
+	font-size: 40px;
+	font-family: 'Courier New', monospace;
+}
+/*I don't think this does anything*/
+.welcome_text h1{
+	margin-top: -10px;
+	font-size: 100px;
+}
+/*Setting the properties of the logo under This week At*/
+.welcome_logo{
+	border-radius: 25%;
+	margin-top: -25px;
+	margin-bottom: 20px;
+	height: 200px;
+	width: 200px;
+}
+
+
+/*This just sets the background colour*/
+body{
+	margin: 0;
+	background: rgb(66, 126, 66);
+}
+
+
+/* boxes containing event details (boxes going down the screen) */
+/*Main container that sets up the grid for the event boxes*/
+div.main_container {
+	padding-top: 20px;
+    width: 1200px;
+	display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+	justify-content: center;
+	align-content: center;
+	margin: -40px auto auto auto;
+}
+/*Properties of the top left box*/
+.item-1 {
+	border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #222222;
+	width: 85%;
+	margin: 20px auto 40px auto;
+	height: 200px;
+	border: white solid 2px;
+}
+/*Makes the box move up and creates a shadow when you hover the box*/
+.item-1:hover{
+	transform: translateY(-1px);
+	box-shadow: 0px 6px 12px black;
+}
+/*Properties of top right box*/
+.item-2{
+	border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    background-color: #222222;
+	width: 85%;
+	margin: 20px auto 40px auto;
+	height: 200px;
+	border: white solid 2px;
+}
+/*Makes the box move up and creates a shadow when you hover the box*/
+.item-2:hover{
+	transform: translateY(-1px);
+	box-shadow: 0px 12px 24px black;
+}
+/*Properties of bottom left box*/
+.item-3{
+	border-radius: 10px;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #222222;
+	width: 85%;
+	margin: auto;
+	height: 200px;
+	border: white solid 2px;
+}
+/*Makes the box move up and creates a shadow when you hover the box*/
+.item-3:hover{
+	transform: translateY(-1px);
+	box-shadow: 0px 12px 24px black;
+}
+/*Properties of bottom left box*/
+.item-4{
+	border-radius: 10px;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    background-color: #222222;
+	width: 85%;
+	margin: auto;
+	height: 200px;
+	border: white solid 2px;
+}
+/*Makes the box move up and creates a shadow when you hover the box*/
+.item-4:hover{
+	transform: translateY(-1px);
+	box-shadow: 0px 12px 24px black;
+}
+/*Overall property for all team logos in event boxes */
+.event_teamlogos{
+	height: 100px;
+	width: 100px;
+}
+/*Adjusting the logos to fit properly*/
+.logo-1{
+	margin-top: 2px;
+	margin-left: 28px;
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+.logo-2{
+	margin-top: 2px;
+	margin-right: 28px;
+	float: right;
+	height: 100px;
+	width: 100px;
+}
+/*VS Logo properties*/
+.vs{
+	margin-top: 2px;
+	margin-left: 75px;
+	height: 100px;
+	width: 100px;
+}
+/*Line seperating team logos and event details*/
+.line{
+	height: 1px;
+	width: 450px;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*Propeties for event text on all the boxes*/
+.event_details{
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Horizontal centering */
+	align-items: center;
+	color: white;
+	width: 510px;
+	margin-top: -20px;
+}
+/*Sets the clickable link in event details to green*/
+.event_details a{
+	color: limegreen;
+}
+/*margins for details text*/
+.event_details p{
+	margin: 5px 0px -2px 0px;
+}
+/*enlarges the paragraph that says the tournament name*/
+.event_details .tournament_enlarge{
+	font-size: 21px;
+}
+/*Footer properties*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    margin-top: 50px;
+    font-weight: bold;
+}
+/*Centers the cite for images at the bottom*/
+.image_cite{
+	display: flex;
+	justify-content: center; /* Horizontal centering */
+	align-items: center;
+}
+
+

@@ -1,0 +1,245 @@
+    /* Background colour */ 
+    * {
+
+        cursor:crosshair;
+
+    }
+    body {
+        margin: 0;
+        background: rgb(66, 126, 66);
+      
+    }
+
+    /* Testing Form Styles */
+    form {
+      margin-top: 40px;
+
+    }
+    /* Styles for header 1 */
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+        text-decoration: underline;
+        font-size: 85px;
+        font-family: fantasy, 'Times New Roman';
+    }
+     /* Styles for header 2 */
+    h2 {
+        text-align: center;
+        padding-top: 20px;
+        text-decoration: underline;
+        font-size: 75px;
+        font-family: fantasy, 'Times New Roman';
+    }
+/* Main Nav */
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 0 10px;
+    margin: 10px;
+
+
+}
+
+header .logo_header {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+header .logo {
+    height: 80px; /* image fits the nav */
+    width: auto;
+}
+
+header nav.horizontalNav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Images/tavern.jpg);
+    
+}
+
+header ul {
+    display: flex;
+    flex-grow: 1; /*takes up the remaining space of the nav evenly*/
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+header li {
+    flex: 1;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.3em;
+    color: white;
+   
+}
+
+/* Color scene for hovering over a button in the nav bar */
+
+header li:hover {
+    background: green;
+    color: white;
+    
+}
+
+header a {
+    display: block; /*clicking the li instead of the text will take you to the page*/
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+    
+ /* Container for the form-This is an idea*/
+
+ .respawn-container {
+
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+
+
+ }
+
+
+/* Nitpicking */
+
+form{
+
+    margin-top: 20px;
+
+}
+
+/* sets up the grid */
+.group-form{
+
+margin-bottom: 15px;
+
+}
+/*Fixes Party size box to be the same size as the other boxes.*/
+#party-size{
+    width: 622px;
+}
+
+/* using label for extra spacing */
+label {
+
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+
+}
+
+/* This will take the Party size date and time box's I made and make them into better looking box's, stretch the box's out, slight tweak to the shape of the box's background of the box is black, the colour of the numbers is green */
+input, select {
+
+width: 100%;
+padding: 10px;
+border: 1px solid limegreen;
+border-radius: 5px;
+background-color:black;
+color: limegreen;
+
+text-align: center;
+}
+
+/* Time to apply what we learned in class! This will make the buttons into a more pleasant looking grid and going by 4x11 */
+.time-availability{
+
+display:grid;
+
+grid-template-columns: repeat(4,1fr);
+
+gap: 10px;
+
+}
+/* buttons were a tad too big so squash them down a bit, I also changed the color of the font and also I learned how to change the style of the cursor! Thanks W3 Schools!  */
+.time-availability button {
+
+padding: 10 px;
+border: none;
+border-radius: 5px;
+background-color: whitesmoke;
+color: rgb(66, 126, 66);
+
+
+}
+/* copied code from josh's nav bar  for hovering over the time slots */
+.time-availability button:hover {
+    background: green;
+    color: white;
+}
+
+/* This took the longest to get right or atleast in the ball park. */
+.reserve-button {
+display:block;
+width: fit-content;
+padding: 10px;
+margin: 40px auto 0 auto;
+text-align: center;
+text-decoration: underline;
+font-family: fantasy, 'Times New Roman';
+
+font-weight: bold;
+background-color: white;
+
+color: rgb(66, 126, 66);
+
+font-size: 30px;
+
+}
+
+.reserve-button:hover {
+    background: green;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    /*Added these so the box doesn't shrink when hovered. It was shrinking cause the border-radius.*/
+    height: 59px;
+    width: 201.417px;
+}
+
+/* Newsletter styleing */
+.Newsletter{
+
+ padding-top: 20px;
+ text-align: center;
+
+}
+
+
+/* Background image for the navbar! */
+.bg-image {
+
+    background-image: url("images/tavern.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+}
+
+
+/* Revised Footer code! Thanks fellahs!. */
+.footer {
+
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+
+
+
